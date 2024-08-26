@@ -1,11 +1,10 @@
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".nav");
 
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  if (nav.classList.contains("active")) {
-    hamburger.style.display = "none";
-  } else {
-    hamburger.style.display = "flex";
-  }
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+    console.log("Toggle clicked");
+  });
 });
