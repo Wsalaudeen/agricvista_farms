@@ -226,7 +226,7 @@ html {
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url(/Images/image\ 1.png);
-  height: 80vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -246,15 +246,17 @@ html {
 
 .hero-text h1 {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--bg-color);
   font-family: var(--font-regular);
   margin-block-end: 1rem;
 }
 
 .hero-text p {
-  font-size: 12px;
-  line-height: 1.6;
-  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 200;
+  color: var(--bg-color);
   font-family: var(--font-base);
   margin-block-end: 3rem;
 }
@@ -395,4 +397,105 @@ h2 {
   font-weight: bold;
   font-family: var(--font-base);
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .hero-content {
+    padding-inline-end: 0;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .year-overlay {
+    display: none;
+  }
+}
+
+/* General section styling */
+
+.hero-services {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--bg-color);
+  border: 2px solid red;
+}
+
+.hero-services h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.hero-services p {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-family: var(--font-base);
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+/* service-cards */
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* individual service card styling */
+
+.service-card {
+  flex: 1;
+  max-width: 250px;
+  /* min-width: 300px; */
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  /* text-align: center; */
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-family: var(--font-regular);
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive design for smaller screens */
+
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 300px;
+    width: 100%;
+  }
 }
