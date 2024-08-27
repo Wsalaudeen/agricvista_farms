@@ -533,6 +533,7 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 250px;
+  cursor: pointer;
   /* height: 250px; */
   text-align: center;
   /* border: 2px solid green; */
@@ -569,4 +570,102 @@ h2 {
   font-weight: bold;
   color: var(--primary-color);
   transition: color 0.3s ease;
+}
+
+/* general styling for hero-call section */
+
+.hero-call {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/Images/greener\ future.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  color: var(--bg-color);
+  padding: 20px;
+}
+
+.call-content {
+  max-width: 800px;
+
+  margin-inline-start: 10%;
+  text-align: left;
+  /* border: 2px solid red; */
+}
+
+.call-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-block-end: 30px;
+  line-height: 1.2;
+  font-family: var(--font-regular);
+}
+
+.call-button-group {
+  display: flex;
+  gap: 20px;
+  margin-block-start: 3rem;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-family: var(--font-base);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.contact {
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+}
+
+.learn:hover {
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+}
+
+.contact:hover {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+/* mobile screens */
+
+@media (max-width: 768px) {
+  .call-content {
+    margin-left: 5%;
+  }
+
+  .call-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .call-content {
+    margin-left: 0;
+  }
+
+  .call-content h1 {
+    font-size: 2rem;
+  }
+
+  .call-button-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
 }
