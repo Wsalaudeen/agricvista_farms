@@ -880,3 +880,11 @@ button {
     gap: 20px;
   }
 }
+
+/* general styling of the testimonials section */
+.testimonials {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
